@@ -28,10 +28,13 @@ namespace csharp
 
                 DecreaseSellIn(i);
 
-
                 if (Items[i].Name != AGED_BRIE && Items[i].Name != BACKSTAGE_PASSES_CONCERT)
                 {
                         DecreaseQuality(i);
+                        if(Items[i].SellIn < 0)
+                        {
+                            DecreaseQuality(i);
+                        }
                        
                 }
                 else
@@ -49,30 +52,23 @@ namespace csharp
                         {
                             IncreaseQuality(i);
                         }
+                        if (Items[i].SellIn < 0)
+                        {
+                            Items[i].Quality = 0;
+                        }
+
                     }
 
-                }
-
-
-                if (Items[i].SellIn < 0 && Items[i].Name == AGED_BRIE)
-                {
-                    IncreaseQuality(i);
-                }
-
-                if (Items[i].SellIn < 0)
-                {
-                    if (Items[i].Name != AGED_BRIE)
+                    if (Items[i].Name == AGED_BRIE)
                     {
-                        if (Items[i].Name != BACKSTAGE_PASSES_CONCERT)
+                        if (Items[i].SellIn < 0)
                         {
-                            DecreaseQuality(i);
-                        }
-                        else
-                        {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
+                            IncreaseQuality(i);
                         }
                     }
+
                 }
+
             }
         }
 
