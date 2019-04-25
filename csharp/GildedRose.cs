@@ -21,23 +21,15 @@ namespace csharp
         {
             for (var i = 0; i < Items.Count; i++)
             {
-                if(Items[i].Name == SULFURAS)
+                if (Items[i].Name == SULFURAS)
                 {
                     continue;
                 }
 
                 DecreaseSellIn(i);
 
-                if (Items[i].Name != AGED_BRIE && Items[i].Name != BACKSTAGE_PASSES_CONCERT)
-                {
-                        DecreaseQuality(i);
-                        if(Items[i].SellIn < 0)
-                        {
-                            DecreaseQuality(i);
-                        }
-                       
-                }
-                else
+
+                if (Items[i].Name == AGED_BRIE || Items[i].Name == BACKSTAGE_PASSES_CONCERT)
                 {
                     IncreaseQuality(i);
 
@@ -66,7 +58,15 @@ namespace csharp
                             IncreaseQuality(i);
                         }
                     }
+                }
+                else
+                {
+                    DecreaseQuality(i);
 
+                    if (Items[i].SellIn < 0)
+                    {
+                        DecreaseQuality(i);
+                    }
                 }
 
             }
