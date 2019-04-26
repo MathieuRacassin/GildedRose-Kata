@@ -26,22 +26,22 @@ namespace csharp
                     continue;
                 }
 
-                DecreaseSellIn(i);
+                DecreaseSellIn(Items[i]);
 
                 if (Items[i].Name == AGED_BRIE || Items[i].Name == BACKSTAGE_PASSES_CONCERT)
                 {
-                    IncreaseQuality(i);
+                    IncreaseQuality(Items[i]);
 
                     if (Items[i].Name == BACKSTAGE_PASSES_CONCERT)
                     {
                         if (Items[i].SellIn < 10)
                         {
-                            IncreaseQuality(i);
+                            IncreaseQuality(Items[i]);
                         }
 
                         if (Items[i].SellIn < 5)
                         {
-                            IncreaseQuality(i);
+                            IncreaseQuality(Items[i]);
                         }
                         if (Items[i].SellIn < 0)
                         {
@@ -53,35 +53,39 @@ namespace csharp
                     {
                         if (Items[i].SellIn < 0)
                         {
-                            IncreaseQuality(i);
+                            IncreaseQuality(Items[i]);
                         }
                     }
                 }
                 else
                 {
-                    DecreaseQuality(i);
+                    DecreaseQuality(Items[i]);
 
                     if (Items[i].SellIn < 0)
                     {
-                        DecreaseQuality(i);
+                        DecreaseQuality(Items[i]);
                     }
                 }
             }
         }
 
-        private void DecreaseSellIn(int i)
+        private void DecreaseSellIn(Item item)
         {
-            Items[i].SellIn--;
+            item.SellIn--;
         }
 
-        private void DecreaseQuality(int itemIndex)
+        private void DecreaseQuality(Item item)
         {
-            Items[itemIndex].Quality = Math.Max(MIN_QUALITY, Items[itemIndex].Quality - 1);
+            item.Quality = Math.Max(MIN_QUALITY, item.Quality - 1);
         }
 
         private void IncreaseQuality(int itemIndex)
         {
             Items[itemIndex].Quality = Math.Min(MAX_QUALITY, Items[itemIndex].Quality + 1);
+        }
+        private void IncreaseQuality(Item item)
+        {
+            item.Quality = Math.Min(MAX_QUALITY, item.Quality + 1);
         }
     }
 }
