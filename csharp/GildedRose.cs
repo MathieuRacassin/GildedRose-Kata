@@ -28,7 +28,6 @@ namespace csharp
 
                 DecreaseSellIn(i);
 
-
                 if (Items[i].Name == AGED_BRIE || Items[i].Name == BACKSTAGE_PASSES_CONCERT)
                 {
                     IncreaseQuality(i);
@@ -48,7 +47,6 @@ namespace csharp
                         {
                             Items[i].Quality = 0;
                         }
-
                     }
 
                     if (Items[i].Name == AGED_BRIE)
@@ -68,7 +66,6 @@ namespace csharp
                         DecreaseQuality(i);
                     }
                 }
-
             }
         }
 
