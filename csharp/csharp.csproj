@@ -63,6 +63,13 @@
   <ItemGroup>
     <Compile Include="GildedRose.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="NewItemFactory.cs" />
+    <Compile Include="NewItem.cs" />
+    <Compile Include="ItemAgedBrie.cs" />
+    <Compile Include="ItemBackStagePass.cs" />
+    <Compile Include="ItemDefault.cs" />
+    <Compile Include="ItemSulfura.cs" />
+    <Compile Include="ItemType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

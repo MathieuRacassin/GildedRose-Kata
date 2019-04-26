@@ -21,6 +21,7 @@ namespace csharp
         {
             for (var i = 0; i < Items.Count; i++)
             {
+                NewItem.CreateItem(Items[i]).UpdateQuality();
                 if (Items[i].Name == SULFURAS)
                 {
                     continue;
@@ -79,10 +80,6 @@ namespace csharp
             item.Quality = Math.Max(MIN_QUALITY, item.Quality - 1);
         }
 
-        private void IncreaseQuality(int itemIndex)
-        {
-            Items[itemIndex].Quality = Math.Min(MAX_QUALITY, Items[itemIndex].Quality + 1);
-        }
         private void IncreaseQuality(Item item)
         {
             item.Quality = Math.Min(MAX_QUALITY, item.Quality + 1);
