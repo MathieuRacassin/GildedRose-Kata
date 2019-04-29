@@ -8,7 +8,7 @@ namespace csharp
 {
     public class ItemSulfura : NewItem
     {
-        public ItemSulfura(Item item) : base(item)
+        public ItemSulfura() : base()
         {
         }
         public override void UpdateQuality()

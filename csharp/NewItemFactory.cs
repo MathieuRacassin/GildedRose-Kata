@@ -13,13 +13,13 @@ namespace csharp
             switch (item.Name)
             {
                 case ItemType.AGED_BRIE:
-                    return new ItemAgedBrie(item);
+                    return new ItemAgedBrie() { Name = item.Name, Quality = item.Quality, SellIn = item.SellIn };
                 case ItemType.BACKSTAGE_PASSES_CONCERT:
-                    return new ItemBackStagePass(item);
+                    return new ItemBackStagePass() { Name = item.Name, Quality = item.Quality, SellIn = item.SellIn };
                 case ItemType.SULFURAS:
-                    return new ItemSulfura(item);
+                    return new ItemSulfura() { Name = item.Name, Quality = item.Quality, SellIn = item.SellIn };
                 default:
-                    return new ItemDefault(item);
+                    return new ItemDefault() { Name = item.Name, Quality = item.Quality, SellIn = item.SellIn };
             }
         }
     }

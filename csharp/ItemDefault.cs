@@ -8,18 +8,18 @@ namespace csharp
 {
     public class ItemDefault : NewItem
     {
-        public ItemDefault(Item item) : base(item)
+        public ItemDefault( ) : base()
         {
         }
 
         public override void UpdateQuality()
         {
-            DecreaseQuality(this);
-            DecreaseSellIn(this);
+            DecreaseQuality();
+            DecreaseSellIn();
 
             if (this.SellIn < 0)
             {
-                DecreaseQuality(this);
+                DecreaseQuality();
             }
         }
     }

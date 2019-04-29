@@ -21,52 +21,9 @@ namespace csharp
         {
             for (var i = 0; i < Items.Count; i++)
             {
-                NewItem.CreateItem(Items[i]).UpdateQuality();
-                if (Items[i].Name == SULFURAS)
-                {
-                    continue;
-                }
-
-                DecreaseSellIn(Items[i]);
-
-                if (Items[i].Name == AGED_BRIE || Items[i].Name == BACKSTAGE_PASSES_CONCERT)
-                {
-                    IncreaseQuality(Items[i]);
-
-                    if (Items[i].Name == BACKSTAGE_PASSES_CONCERT)
-                    {
-                        if (Items[i].SellIn < 10)
-                        {
-                            IncreaseQuality(Items[i]);
-                        }
-
-                        if (Items[i].SellIn < 5)
-                        {
-                            IncreaseQuality(Items[i]);
-                        }
-                        if (Items[i].SellIn < 0)
-                        {
-                            Items[i].Quality = 0;
-                        }
-                    }
-
-                    if (Items[i].Name == AGED_BRIE)
-                    {
-                        if (Items[i].SellIn < 0)
-                        {
-                            IncreaseQuality(Items[i]);
-                        }
-                    }
-                }
-                else
-                {
-                    DecreaseQuality(Items[i]);
-
-                    if (Items[i].SellIn < 0)
-                    {
-                        DecreaseQuality(Items[i]);
-                    }
-                }
+                NewItem newItem = NewItemFactory.Create(Items[i]);
+                newItem.UpdateQuality();
+                Items[i] = (Item)newItem;
             }
         }
 

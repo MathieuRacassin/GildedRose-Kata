@@ -8,23 +8,23 @@ namespace csharp
 {
     public class ItemBackStagePass : NewItem
     {
-        public ItemBackStagePass(Item item) : base(item)
+        public ItemBackStagePass() : base()
         {
         }
 
         public override void UpdateQuality()
         {
-            DecreaseSellIn(this);
-            IncreaseQuality(this);
+            DecreaseSellIn();
+            IncreaseQuality();
 
             if (this.SellIn < 10)
             {
-                IncreaseQuality(this);
+                IncreaseQuality();
             }
 
             if (this.SellIn < 5)
             {
-                IncreaseQuality(this);
+                IncreaseQuality();
             }
             if (this.SellIn < 0)
             {
