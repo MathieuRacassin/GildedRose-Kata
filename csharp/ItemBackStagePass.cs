@@ -8,13 +8,7 @@ namespace csharp
 {
     public class ItemBackStagePass : NewItem
     {
-        private Item item;
-
-        public ItemBackStagePass() : base()
-        {
-        }
-
-        public ItemBackStagePass(Item item)
+        public ItemBackStagePass(Item item):base(item)
         {
             this.item = item;
         }
@@ -24,18 +18,18 @@ namespace csharp
             DecreaseSellIn();
             IncreaseQuality();
 
-            if (this.SellIn < 10)
+            if (this.item.SellIn < 10)
             {
                 IncreaseQuality();
             }
 
-            if (this.SellIn < 5)
+            if (this.item.SellIn < 5)
             {
                 IncreaseQuality();
             }
-            if (this.SellIn < 0)
+            if (this.item.SellIn < 0)
             {
-                this.Quality = 0;
+                this.item.Quality = 0;
             }
         }
     }

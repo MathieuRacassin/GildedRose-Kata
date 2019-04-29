@@ -23,7 +23,7 @@ namespace csharp
             {
                 NewItem newItem = NewItemFactory.Create(Items[i]);
                 newItem.UpdateItem();
-                Items[i] = (Item)newItem;
+                Items[i] = newItem.Item;
             }
         }
 

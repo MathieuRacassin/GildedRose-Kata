@@ -8,13 +8,8 @@ namespace csharp
 {
     public class ItemAgedBrie : NewItem
     {
-        private Item item;
 
-        public ItemAgedBrie(): base()
-        {
-        }
-
-        public ItemAgedBrie(Item item)
+        public ItemAgedBrie(Item item): base(item)
         {
             this.item = item;
         }
@@ -24,7 +19,7 @@ namespace csharp
             DecreaseSellIn();
             IncreaseQuality();
 
-            if (this.SellIn < 0)
+            if (this.item.SellIn < 0)
             {
                 IncreaseQuality();
             }

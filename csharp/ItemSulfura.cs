@@ -8,13 +8,8 @@ namespace csharp
 {
     public class ItemSulfura : NewItem
     {
-        private Item item;
 
-        public ItemSulfura() : base()
-        {
-        }
-
-        public ItemSulfura(Item item)
+        public ItemSulfura(Item item):base(item)
         {
             this.item = item;
         }

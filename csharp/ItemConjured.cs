@@ -8,13 +8,7 @@ namespace csharp
 {
     public class ItemConjured : NewItem
     {
-        private Item item;
-
-        public ItemConjured() : base()
-        {
-        }
-
-        public ItemConjured(Item item)
+        public ItemConjured(Item item): base(item)
         {
             this.item = item;
         }
@@ -24,7 +18,7 @@ namespace csharp
             DecreaseQuality();
             DecreaseSellIn();
 
-            if (this.SellIn < 0)
+            if (this.item.SellIn < 0)
             {
                 DecreaseQuality();
             }
