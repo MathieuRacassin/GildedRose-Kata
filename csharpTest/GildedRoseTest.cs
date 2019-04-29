@@ -176,6 +176,17 @@ namespace csharp
             Assert.IsInstanceOfType(newItem, typeof(ItemConjured));
         }
 
+        [TestMethod]
+        public void ItemsWithOneElementCountGiveOne()
+        {
+            IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = 5, Quality = 50 } };
+            Items items = new Items(Items);
+
+            int count = items.GetCount();
+
+            Assert.AreEqual(1, count);
+        }
+
 
     }
 }

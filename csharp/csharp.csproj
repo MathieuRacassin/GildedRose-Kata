@@ -64,6 +64,7 @@
     <Compile Include="GildedRose.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemConjured.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="NewItemFactory.cs" />
     <Compile Include="NewItem.cs" />
     <Compile Include="ItemAgedBrie.cs" />
