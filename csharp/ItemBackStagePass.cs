@@ -10,7 +10,6 @@ namespace csharp
     {
         public ItemBackStagePass(Item item):base(item)
         {
-            this.item = item;
         }
 
         public override void UpdateItem()

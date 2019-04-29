@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace csharp
 {
-    public abstract class NewItem :Item
+    public abstract class NewItem
     {
         readonly int MAX_QUALITY = 50;
         readonly int MIN_QUALITY = 0;
+
         protected Item item;
 
         protected NewItem(Item item)

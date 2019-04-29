@@ -8,10 +8,8 @@ namespace csharp
 {
     public class ItemSulfura : NewItem
     {
-
         public ItemSulfura(Item item):base(item)
         {
-            this.item = item;
         }
 
         public override void UpdateItem()

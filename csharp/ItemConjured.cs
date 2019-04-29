@@ -10,7 +10,6 @@ namespace csharp
     {
         public ItemConjured(Item item): base(item)
         {
-            this.item = item;
         }
 
         public override void UpdateItem()
