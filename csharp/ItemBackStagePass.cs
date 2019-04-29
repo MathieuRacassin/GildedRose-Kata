@@ -21,7 +21,6 @@ namespace csharp
             {
                 IncreaseQuality();
             }
-
             if (this.item.SellIn < 5)
             {
                 IncreaseQuality();

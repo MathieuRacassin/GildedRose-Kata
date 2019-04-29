@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace csharp
+﻿namespace csharp
 {
     public static class NewItemFactory
     {
@@ -13,15 +7,15 @@ namespace csharp
             switch (item.Name)
             {
                 case ItemType.AGED_BRIE:
-                    return new ItemAgedBrie(item) ;
+                    return new ItemAgedBrie(item);
                 case ItemType.BACKSTAGE_PASSES_CONCERT:
-                    return new ItemBackStagePass(item) ;
+                    return new ItemBackStagePass(item);
                 case ItemType.SULFURAS:
-                    return new ItemSulfura(item) ;
+                    return new ItemSulfura(item);
                 case ItemType.CONJURED:
-                    return new ItemConjured(item) ;
+                    return new ItemConjured(item);
                 default:
-                    return new ItemDefault(item) ;
+                    return new ItemDefault(item);
             }
         }
     }
