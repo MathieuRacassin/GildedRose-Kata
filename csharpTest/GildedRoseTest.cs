@@ -136,7 +136,13 @@ namespace csharp
             Assert.AreEqual(1, Items[0].Quality);
         }
 
-
+        [TestMethod]
+        public void NormalProductNewConstructorWithItem()
+        {
+            Item item = new Item { Name = "olive", SellIn = 0, Quality = 3 };
+            NewItem newItem = new ItemDefault(item);
+            Assert.IsInstanceOfType(newItem, typeof(ItemDefault));
+        }
 
 
 

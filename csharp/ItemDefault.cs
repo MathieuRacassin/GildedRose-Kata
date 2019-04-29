@@ -8,8 +8,15 @@ namespace csharp
 {
     public class ItemDefault : NewItem
     {
+        private Item item;
+
         public ItemDefault( ) : base()
         {
+        }
+
+        public ItemDefault(Item item)
+        {
+            this.item = item;
         }
 
         public override void UpdateItem()
