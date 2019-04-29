@@ -144,7 +144,13 @@ namespace csharp
             Assert.IsInstanceOfType(newItem, typeof(ItemDefault));
         }
 
-
+        [TestMethod]
+        public void AgedBrieProductNewConstructorWithItem()
+        {
+            Item item = new Item { Name = "Aged Brie", SellIn = 0, Quality = 3 };
+            NewItem newItem = new ItemAgedBrie(item);
+            Assert.IsInstanceOfType(newItem, typeof(ItemAgedBrie));
+        }
 
 
     }
