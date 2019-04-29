@@ -125,6 +125,17 @@ namespace csharp
             Assert.AreEqual(0, Items[0].Quality);
         }
 
+        [TestMethod]
+        public void ConjuredProductUpdateQualityShouldDecreaseOfTwoWhenSellInEqualsZero()
+        {
+            IList<Item> Items = new List<Item> { new Item { Name = "Conjured Mana Cake", SellIn = 0, Quality = 3 } };
+            GildedRose app = new GildedRose(Items);
+            app.UpdateQuality();
+            Assert.AreEqual("Conjured Mana Cake", Items[0].Name);
+            Assert.AreEqual(-1, Items[0].SellIn);
+            Assert.AreEqual(1, Items[0].Quality);
+        }
+
 
 
 
