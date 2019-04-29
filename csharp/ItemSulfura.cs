@@ -13,7 +13,6 @@ namespace csharp
         }
         public override void UpdateQuality()
         {
-
         } 
     }
 }

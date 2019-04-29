@@ -20,7 +20,6 @@ namespace csharp
 
         public static NewItem CreateItem(Item item)
         {
-            
             switch (item.Name)
             {
                 case ItemType.AGED_BRIE:
