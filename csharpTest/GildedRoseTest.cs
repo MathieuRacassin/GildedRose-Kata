@@ -152,6 +152,30 @@ namespace csharp
             Assert.IsInstanceOfType(newItem, typeof(ItemAgedBrie));
         }
 
+        [TestMethod]
+        public void BackStagePassProductNewConstructorWithItem()
+        {
+            Item item = new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 3 };
+            NewItem newItem = new ItemBackStagePass(item);
+            Assert.IsInstanceOfType(newItem, typeof(ItemBackStagePass));
+        }
+
+        [TestMethod]
+        public void SulfuraProductNewConstructorWithItem()
+        {
+            Item item = new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 3 };
+            NewItem newItem = new ItemSulfura(item);
+            Assert.IsInstanceOfType(newItem, typeof(ItemSulfura));
+        }
+
+        [TestMethod]
+        public void ConjuredProductNewConstructorWithItem()
+        {
+            Item item = new Item { Name = "Conjured Mana Cake", SellIn = 0, Quality = 3 };
+            NewItem newItem = new ItemConjured(item);
+            Assert.IsInstanceOfType(newItem, typeof(ItemConjured));
+        }
+
 
     }
 }

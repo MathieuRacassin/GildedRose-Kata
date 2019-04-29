@@ -8,8 +8,15 @@ namespace csharp
 {
     public class ItemBackStagePass : NewItem
     {
+        private Item item;
+
         public ItemBackStagePass() : base()
         {
+        }
+
+        public ItemBackStagePass(Item item)
+        {
+            this.item = item;
         }
 
         public override void UpdateItem()

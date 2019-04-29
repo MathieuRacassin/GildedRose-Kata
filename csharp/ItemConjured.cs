@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace csharp
 {
-    class ItemConjured : NewItem
+    public class ItemConjured : NewItem
     {
+        private Item item;
+
         public ItemConjured() : base()
         {
+        }
+
+        public ItemConjured(Item item)
+        {
+            this.item = item;
         }
 
         public override void UpdateItem()
