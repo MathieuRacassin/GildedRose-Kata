@@ -11,7 +11,7 @@ namespace csharp
         public ItemSulfura() : base()
         {
         }
-        public override void UpdateQuality()
+        public override void UpdateItem()
         {
         } 
     }

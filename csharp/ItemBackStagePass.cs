@@ -12,7 +12,7 @@ namespace csharp
         {
         }
 
-        public override void UpdateQuality()
+        public override void UpdateItem()
         {
             DecreaseSellIn();
             IncreaseQuality();

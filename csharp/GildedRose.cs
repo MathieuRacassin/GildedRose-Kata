@@ -22,7 +22,7 @@ namespace csharp
             for (var i = 0; i < Items.Count; i++)
             {
                 NewItem newItem = NewItemFactory.Create(Items[i]);
-                newItem.UpdateQuality();
+                newItem.UpdateItem();
                 Items[i] = (Item)newItem;
             }
         }

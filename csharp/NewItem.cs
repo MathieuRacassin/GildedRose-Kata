@@ -11,7 +11,7 @@ namespace csharp
         readonly int MAX_QUALITY = 50;
         readonly int MIN_QUALITY = 0;
 
-        public abstract void UpdateQuality();
+        public abstract void UpdateItem();
 
         protected void DecreaseSellIn()
         {
