@@ -8,32 +8,30 @@ namespace csharp
 {
     public abstract class NewItem
     {
-        readonly int MAX_QUALITY = 50;
-        readonly int MIN_QUALITY = 0;
+        private readonly int MAX_QUALITY = 50;
+        private readonly int MIN_QUALITY = 0;
 
-        protected Item item;
+        public Item Item { get; protected set; }
 
         protected NewItem(Item item)
         {
-            this.item = item;
+            Item = item;
         }
-
-        public Item Item => item;
 
         public abstract void UpdateItem();
 
         protected void DecreaseSellIn()
         {
-            this.item.SellIn--;
+            Item.SellIn--;
         }
 
         protected void DecreaseQuality()
         {
-            this.item.Quality = Math.Max(MIN_QUALITY, this.item.Quality - 1);
+            Item.Quality = Math.Max(MIN_QUALITY, Item.Quality - 1);
         }
         protected void IncreaseQuality()
         {
-            this.item.Quality = Math.Min(MAX_QUALITY, this.item.Quality + 1);
+            Item.Quality = Math.Min(MAX_QUALITY, Item.Quality + 1);
         }
     }
 }

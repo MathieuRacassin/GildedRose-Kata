@@ -17,7 +17,7 @@ namespace csharp
             DecreaseSellIn();
             IncreaseQuality();
 
-            if (this.item.SellIn < 0)
+            if (Item.SellIn < 0)
             {
                 IncreaseQuality();
             }

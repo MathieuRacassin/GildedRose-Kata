@@ -17,17 +17,17 @@ namespace csharp
             DecreaseSellIn();
             IncreaseQuality();
 
-            if (this.item.SellIn < 10)
+            if (Item.SellIn < 10)
             {
                 IncreaseQuality();
             }
-            if (this.item.SellIn < 5)
+            if (Item.SellIn < 5)
             {
                 IncreaseQuality();
             }
-            if (this.item.SellIn < 0)
+            if (Item.SellIn < 0)
             {
-                this.item.Quality = 0;
+                Item.Quality = 0;
             }
         }
     }

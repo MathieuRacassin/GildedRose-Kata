@@ -6,9 +6,9 @@ namespace csharp
     public class GildedRose
     {
         IList<Item> Items;
-        public GildedRose(IList<Item> Items)
+        public GildedRose(IList<Item> items)
         {
-            this.Items = Items;
+            Items = items;
         }
 
         public void UpdateQuality()
